@@ -1,0 +1,40 @@
+{
+  "name": "vkui-screen-spinner-promise",
+  "version": "1.0.0",
+  "description": "React-компонент, позволяющий создавать Screen Spinner с элементами, позволяющими определить статус загрузки.",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack --env publish --mode production --watch",
+    "build": "webpack --env publish --mode production",
+    "dev": "webpack-dev-server --env testServer --mode development --open"
+  },
+  "author": "ipagar",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ipagar/vkui-screen-spinner-promise"
+  },
+  "peerDependencies": {
+    "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@vkontakte/icons": "^1.4.6",
+    "@vkontakte/vkui": "^2.23.0",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@svgr/webpack": "^4.3.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.3",
+    "webpack-dev-server": "^3.7.1"
+  }
+}
