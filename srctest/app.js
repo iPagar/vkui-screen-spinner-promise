@@ -21,11 +21,11 @@ class ParentWrapper extends React.Component {
             }}
           >
             <MyComponent
-              onLoad={() =>
+              onStart={() =>
                 new Promise((resolve, reject) => {
                   setTimeout(() => {
                     reject('result')
-                  }, 2000)
+                  }, 0)
                 })
               }
               onCancel={() => {
