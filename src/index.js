@@ -80,7 +80,7 @@ class ScreenSpinnerPromise extends React.Component {
 	}
 
 	componentDidMount() {
-		const { duration } = this.state
+		const { duration, isFetched } = this.state
 		const { onStart } = this.props
 
 		setTimeout(

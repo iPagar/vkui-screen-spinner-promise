@@ -25,16 +25,16 @@ class ParentWrapper extends React.Component {
                 new Promise((resolve, reject) => {
                   setTimeout(() => {
                     reject('result')
-                  }, 0)
+                  }, 1500)
                 })
               }
-              onCancel={() => {
+              onCancel={error => {
                 this.setState({ isLoading: false })
-                console.log('Canceled!')
+                console.log('Canceled!', error)
               }}
-              onDone={() => {
+              onDone={success => {
                 this.setState({ isLoading: false })
-                console.log('Done!')
+                console.log('Done!', success)
               }}
             />
           </div>
