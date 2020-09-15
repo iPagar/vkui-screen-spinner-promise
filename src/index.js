@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { PopoutWrapper, getClassName } from '@vkontakte/vkui'
 import Icon36Cancel from '@vkontakte/icons/dist/36/cancel'
-import Icon44Cancel from './img/Icon44Cancel.svg'
-import Icon44Done from './img/Icon44Done.svg'
+// import Icon44Cancel from './img/Icon44Cancel.svg'
+// import Icon44Done from './img/Icon44Done.svg'
 import Icon44Spinner from '@vkontakte/icons/dist/44/spinner'
+import Icon36Done from '@vkontakte/icons/dist/36/done'
 
 import '@vkontakte/vkui/dist/vkui.css'
 import './index.css'
@@ -23,22 +24,23 @@ class ScreenSpinnerPromise extends React.Component {
 		const { onCancel } = this.props
 
 		const icon = isFetched ? (
-			<Icon44Cancel
+			<Icon36Cancel
+				width={44}
+				height={44}
 				fill={'var(--overlay_status_icon)'}
 				style={{
-					position: 'absolute',
 					animation: `fade ${duration}s forwards`
 				}}
 			/>
 		) : (
-			<Icon36Cancel
-				fill={'var(--overlay_status_icon)'}
-				style={{
-					position: 'absolute',
-					animation: `fade ${duration}s forwards`
-				}}
-				onClick={this.onCancelClick}
-			/>
+			<div onClick={this.onCancelClick}>
+				<Icon36Cancel
+					fill={'var(--overlay_status_icon)'}
+					style={{
+						animation: `fade ${duration}s forwards`
+					}}
+				/>
+			</div>
 		)
 		this.setState({ icon })
 
@@ -65,10 +67,11 @@ class ScreenSpinnerPromise extends React.Component {
 
 		if (!isFetched) {
 			const icon = (
-				<Icon44Done
+				<Icon36Done
+					width={44}
+					height={44}
 					fill={'var(--overlay_status_icon)'}
 					style={{
-						position: 'absolute',
 						animation: `fade ${duration}s forwards`
 					}}
 				/>
@@ -102,8 +105,8 @@ class ScreenSpinnerPromise extends React.Component {
 			<PopoutWrapper
 				className={getClassName('ScreenSpinner')}
 				hasMask={false}
-				v="center"
-				h="center"
+				alignY="center"
+				alignX="center"
 				style={{
 					animation: `fade  ${duration + (duration / 100) * 200}s ${
 						isFetched ? 'reverse' : null
@@ -112,7 +115,11 @@ class ScreenSpinnerPromise extends React.Component {
 			>
 				<div className="ScreenSpinner__container Spinner">
 					{!isFetched && (
-						<Icon44Spinner fill={'var(--overlay_status_icon)'} className="Spinner__self" />
+						<Icon44Spinner
+							style={{ position: 'fixed' }}
+							fill={'var(--overlay_status_icon)'}
+							className="Spinner__self"
+						/>
 					)}
 					{icon}
 				</div>

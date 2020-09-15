@@ -18,23 +18,24 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@vkontakte/icons": "^1.6.0",
-    "@vkontakte/vkui": "^2.23.1",
+    "@vkontakte/icons": "^1.41.0",
+    "@vkontakte/vk-bridge": "^2.2.8",
+    "@vkontakte/vkui": "^3.12.6",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/plugin-proposal-class-properties": "^7.5.0",
-    "@babel/preset-env": "^7.5.4",
-    "@babel/preset-react": "^7.0.0",
-    "@svgr/webpack": "^4.3.2",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@svgr/webpack": "^4.3.3",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "style-loader": "^0.23.1",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
