@@ -1,6 +1,6 @@
 {
   "name": "vkui-screen-spinner-promise",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React-компонент, позволяющий создавать Screen Spinner с элементами, позволяющими определить статус загрузки.",
   "main": "build/index.js",
   "scripts": {
